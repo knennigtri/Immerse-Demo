@@ -4,6 +4,6 @@
         <exclude pattern="/apps/immerse/install" />
     </filter>
     <filter root="/apps/sling" />
-    <filter root="/apps/settings/granite/operations/hc" />
+    <filter root="/apps/granite/operations/config/hc" />
     <filter root="/etc/designs/immerse"/>
 </workspaceFilter>

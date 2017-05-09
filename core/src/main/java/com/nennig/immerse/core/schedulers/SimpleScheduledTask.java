@@ -35,7 +35,7 @@ import org.slf4j.LoggerFactory;
     description = "Simple demo for cron-job like task with properties")
 @Service(value = Runnable.class)
 @Properties({
-    @Property(name = "scheduler.expression", value = "*/30 * * * * ?",
+    @Property(name = "scheduler.expression", value = "* */10 * * * ?",
         description = "Cron-job expression"),
     @Property(name = "scheduler.concurrent", boolValue=false,
         description = "Whether or not to schedule this task concurrently")
@@ -46,7 +46,7 @@ public class SimpleScheduledTask implements Runnable {
     
     @Override
     public void run() {
-        logger.debug("SimpleScheduledTask is now running, myParameter='{}'", myParameter);
+        logger.info("SimpleScheduledTask is now running, myParameter='{}'", myParameter);
     }
     
     @Property(label = "A parameter", description = "Can be configured in /system/console/configMgr")
@@ -60,6 +60,6 @@ public class SimpleScheduledTask implements Runnable {
 
     private void configure(final Map<String, Object> config) {
         myParameter = PropertiesUtil.toString(config.get(MY_PARAMETER), null);
-        logger.debug("configure: myParameter='{}''", myParameter);
+        logger.info("configure: myParameter='{}''", myParameter);
     }
 }

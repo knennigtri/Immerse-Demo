@@ -18,12 +18,14 @@ package com.nennig.immerse.core.listeners;
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Property;
 import org.apache.felix.scr.annotations.Service;
-import org.apache.sling.api.SlingConstants;
 import org.osgi.service.event.Event;
 import org.osgi.service.event.EventConstants;
 import org.osgi.service.event.EventHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.day.cq.replication.ReplicationAction;
+import com.day.cq.replication.ReplicationActionType;
 
 /**
  * A service to demonstrate how changes in the resource tree
@@ -35,13 +37,17 @@ import org.slf4j.LoggerFactory;
  */
 @Component(immediate = true)
 @Service(value = EventHandler.class)
-@Property(name = EventConstants.EVENT_TOPIC, value = "org/apache/sling/api/resource/Resource/*")
+@Property(name = EventConstants.EVENT_TOPIC, value = ReplicationAction.EVENT_TOPIC)
 public class SimpleResourceListener implements EventHandler {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
     public void  handleEvent(final Event event) {
-        logger.debug("Resource event: {} at: {}", event.getTopic(), event.getProperty(SlingConstants.PROPERTY_PATH));
+    	ReplicationAction action = ReplicationAction.fromEvent(event);
+    	
+    	if (action.getType().equals(ReplicationActionType.ACTIVATE)) {
+    		logger.info("{} Published", action.getPath());
+    	}
     }
 }
 

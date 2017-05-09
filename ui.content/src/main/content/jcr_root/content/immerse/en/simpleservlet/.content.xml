@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:description="Template for initial or main page of the site."
-    jcr:primaryType="cq:Template"
-    jcr:title="Immerse Site Home Page"
-    allowedPaths="[/content/immerse]"
-    ranking="{Long}100">
+    jcr:primaryType="cq:Page">
     <jcr:content
+        cq:cloudserviceconfigs="[[]]"
+        cq:contextHubPath="/etc/cloudsettings/default/contexthub"
+        cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
+        cq:lastModified="{Date}2017-05-03T13:07:07.416-07:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/immerse/templates/page-content"
+        jcr:lastModified="{Date}2017-05-03T13:07:07.413-07:00"
+        jcr:lastModifiedBy="admin"
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="immerse/components/structure/page">
+        jcr:title="SimpleServlet"
+        sling:resourceType="immerse/components/structure/page"
+        sling:vanityPath="myVanityURL">
         <logo
             jcr:primaryType="nt:unstructured"
             sling:resourceType="immerse/components/structure/logo"/>
@@ -23,8 +29,12 @@
             <text
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="immerse/components/content/text"
-                text="&lt;p>This is a home page&lt;/p>"
+                text="&lt;p>This is a content page&lt;/p>"
                 textIsRich="true"/>
         </par>
+        <image
+            jcr:lastModified="{Date}2017-05-03T13:07:07.413-07:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"/>
     </jcr:content>
 </jcr:root>

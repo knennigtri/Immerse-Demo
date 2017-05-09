@@ -4,8 +4,8 @@
     <jcr:content
         jcr:primaryType="nt:unstructured"
         jcr:title="English"
-        pageTitle="New Project"
-        sling:resourceType="immerse/components/structure/page">
+        sling:resourceType="immerse/components/structure/page"
+        pageTitle="New Project">
         <logo
             jcr:primaryType="nt:unstructured"
             sling:resourceType="immerse/components/structure/logo"/>
@@ -21,16 +21,16 @@
             <title_0
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Service Component"
-                type="h2"
-                sling:resourceType="immerse/components/content/title"/>
+                sling:resourceType="immerse/components/content/title"
+                type="h2"/>
             <servicecomponent
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="immerse/components/content/helloworld"/>
             <title_1
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Lorem ipsum"
-                type="h2"
-                sling:resourceType="immerse/components/content/title"/>
+                sling:resourceType="immerse/components/content/title"
+                type="h2"/>
             <text
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="immerse/components/content/text"
@@ -69,4 +69,5 @@
             <file/>
         </image>
     </jcr:content>
+    <simpleservlet/>
 </jcr:root>

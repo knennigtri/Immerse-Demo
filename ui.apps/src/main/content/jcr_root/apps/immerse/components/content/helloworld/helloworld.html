@@ -15,7 +15,16 @@
 */-->
 <p data-sly-test="${properties.text}">Text property: ${properties.text}</p>
 
-<pre data-sly-use.hello="com.nennig.immerse.core.models.HelloWorldModel">
+<pre data-sly-use.hellp="com.nennig.immerse.core.models.HelloWorldModel">
 HelloWorldModel says:
 ${hello.message}
+</pre>
+
+<pre data-sly-use.myservice="com.nennig.immerse.core.MyService">
+MyService says:
+${myservice.myMethod}
+</pre>
+<pre data-sly-use.rrFactory="org.apache.sling.api.resource.ResourceResolverFactory">
+ResourceResolverFactory says the current user of the thread is:
+${rrFactory.ThreadResourceResolver.UserID}
 </pre>

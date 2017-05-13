@@ -1,4 +1,4 @@
-package com.nennig.immerse.core;
+	package com.nennig.immerse.core;
 
 import javax.jcr.Session;
 
@@ -18,7 +18,7 @@ import org.slf4j.LoggerFactory;
         description="This is a Simple Health Check.")
 @Properties({
         @Property(name=HealthCheck.NAME, value="Immerse Health Check"),
-        @Property(name=HealthCheck.TAGS, unbounded= PropertyUnbounded.ARRAY, value={"security", "test"},
+        @Property(name=HealthCheck.TAGS, unbounded= PropertyUnbounded.ARRAY, value={"test", "security"},
                 label="Tags", description="Tags for the health check."),
         @Property(name=HealthCheck.MBEAN_NAME, value="immerseHealthCheck",
                 label="MBean Name", description="Name of the JMX mbean to register for this check.")

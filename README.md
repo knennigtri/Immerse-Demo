@@ -2,6 +2,16 @@
 
 This is a project template for AEM-based applications. It is intended as a best-practice set of examples as well as a potential starting point to develop your own functionality.
 
+## Main use cases
+ * Servlet Example in `SimpleServlet.java`
+ * Custom Service/Consumer `MyService.java` and `MyServiceImpl.java`
+ * Vanity URL in `/content/immerse/en/jcr:content`
+ * AdaptTo example in `SimpleServlet.java`
+ * Service User Mapping to a subservice `/apps/immerse/config.author/<PID>`
+ * Full Health Check example `ImmerseHealthCheck.java`
+   * Composite Health report for "test" tag `/apps/immerse/config/<PID>`
+   * Add the Composite Health Report to the Health Reposts console `/apps/granite/operations/config/hc/<hsnode>`
+
 ## Modules
 
 The main parts of the template are:

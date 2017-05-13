@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
+        cq:lastReplicated="{Date}2017-05-03T12:56:13.914-07:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        jcr:isCheckedOut="{Boolean}true"
         jcr:language="fr"
+        jcr:mixinTypes="[cq:ReplicationStatus,mix:versionable]"
         jcr:primaryType="nt:unstructured"
         jcr:title="Français"
-        pageTitle="Nouveau Project"
-        sling:resourceType="immerse/components/structure/page">
+        jcr:uuid="c200c17e-dfb4-4f16-8d74-c62f9fa54574"
+        sling:resourceType="immerse/components/structure/page"
+        pageTitle="Nouveau Project">
         <logo
             jcr:primaryType="nt:unstructured"
             sling:resourceType="immerse/components/structure/logo"/>
@@ -22,16 +28,16 @@
             <title_0
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Service Component"
-                type="h2"
-                sling:resourceType="immerse/components/content/title"/>
+                sling:resourceType="immerse/components/content/title"
+                type="h2"/>
             <servicecomponent
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="immerse/components/content/helloworld"/>
             <title_1
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Lorem ipsum"
-                type="h2"
-                sling:resourceType="immerse/components/content/title"/>
+                sling:resourceType="immerse/components/content/title"
+                type="h2"/>
             <text
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="immerse/components/content/text"

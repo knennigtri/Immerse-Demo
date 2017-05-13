@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
+        cq:cloudserviceconfigs="[[]]"
+        cq:contextHubPath="/etc/cloudsettings/default/contexthub"
+        cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
+        cq:lastModified="{Date}2017-05-08T22:50:47.219-07:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2017-05-05T16:01:11.240-07:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:ReplicationStatus,mix:versionable]"
         jcr:primaryType="nt:unstructured"
         jcr:title="English"
+        jcr:uuid="ef0adc4f-b946-4bcc-bc4f-99da6515e2a4"
         sling:resourceType="immerse/components/structure/page"
+        sling:vanityPath="myDemo"
         pageTitle="New Project">
         <logo
             jcr:primaryType="nt:unstructured"
@@ -69,5 +81,4 @@
             <file/>
         </image>
     </jcr:content>
-    <simpleservlet/>
 </jcr:root>

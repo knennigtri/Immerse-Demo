@@ -15,21 +15,19 @@
  */
 package com.nennig.immerse.core.servlets;
 
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+
 import org.apache.felix.scr.annotations.sling.SlingServlet;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
-import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.servlets.SlingAllMethodsServlet;
 import org.apache.sling.api.servlets.SlingSafeMethodsServlet;
 
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageManager;
-
-import javax.jcr.Session;
-import javax.servlet.ServletException;
-
-import java.io.IOException;
 
 /**
  * Servlet that writes some sample content into the response. It is mounted for
@@ -46,6 +44,7 @@ public class SimpleServlet extends SlingSafeMethodsServlet {
             final SlingHttpServletResponse resp) throws ServletException, IOException {
 
     	ResourceResolver rr = req.getResourceResolver();
+    	
     	//Sling Adapter Example
     	PageManager pm = rr.adaptTo(PageManager.class);
     	Page thisPage = pm.getContainingPage(req.getResource()); 

@@ -31,7 +31,7 @@ import org.slf4j.LoggerFactory;
  * It also demonstrates how property values can be set. Users can
  * set the property values in /system/console/configMgr
  */
-@Component(metatype = true, label = "A scheduled task", 
+@Component(metatype = true, label = "Immerse Scheduled Task", 
     description = "Simple demo for cron-job like task with properties")
 @Service(value = Runnable.class)
 @Properties({
